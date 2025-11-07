@@ -18100,11 +18100,11 @@ getWindDirIcon(deg) {
       case "W":
         i = 6;
         break;
+      case "WNW":
       case "NW":
-      case "NNW":
         i = 7;
         break;
-      case "WNW":
+      case "NNW":
         i = 8;
         break;
       default:
