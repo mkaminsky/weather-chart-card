@@ -305,6 +305,10 @@ subscribeForecastEvents() {
 
   connectedCallback() {
     super.connectedCallback();
+    this._updateClock();
+    if (this._updateClockInterval === undefined) {
+      this._updateClockInterval = setInterval(this._updateClock.bind(this), 1000);
+    }
     if (!this.resizeInitialized) {
       this.delayedAttachResizeObserver();
     }
